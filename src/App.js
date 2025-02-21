@@ -26,7 +26,7 @@ const App = () => {
       if (!parsedInput.data || !Array.isArray(parsedInput.data)) {
         throw new Error("Invalid JSON format. Must contain a 'data' array.");
       }
-      const response = await axios.post("http://localhost:3000/bfhl", parsedInput);
+      const response = await axios.post("https://bajajbackend-8iur.onrender.com/bfhl", parsedInput);
       setResponseData(response.data);
     } catch (err) {
       setError(err.message);
